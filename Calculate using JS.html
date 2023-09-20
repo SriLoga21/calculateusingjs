@@ -1,0 +1,93 @@
+<html>
+	<head>
+		<title>Call Function</title>
+		<style>
+			.text 
+			{
+				border: 3px solid black;
+				text-align: left;
+				font-weight: bold;
+				width:150px;
+				height: 45px;
+				margin-left: 25px;
+				margin-bottom: 15px;
+			}
+		</style>
+	</head>
+	<body>
+		<script>
+			function calculateAll()
+			{
+				let value1 = (document.getElementById('Number 1').value);
+				let value2 = (document.getElementById('Number 2').value);
+				add();
+				sub();
+				multiply();
+				divide();
+			}
+			function add()
+			{
+				let value1 = parseInt(document.getElementById('Number 1').value);
+				let value2 = parseInt(document.getElementById('Number 2').value);
+				let output = value1 + value2;
+				document.getElementById("addOutput").value = output;
+			}
+			function sub()
+			{
+				let value1 = (document.getElementById('Number 1').value);
+				let value2 = (document.getElementById('Number 2').value);
+				let output = value1 - value2;
+				document.getElementById("subOutput").value = output;
+			}
+			function multiply()
+			{
+				let value1 = (document.getElementById('Number 1').value);
+				let value2 = (document.getElementById('Number 2').value);
+				let output = value1 * value2;
+				document.getElementById("mulOutput").value = output;
+			}
+			function divide()
+			{
+				let value1 = (document.getElementById('Number 1').value);
+				let value2 = (document.getElementById('Number 2').value);
+				let output = value1 / value2;
+				document.getElementById("divOutput").value = output;
+			}
+			
+			
+		</script>
+		
+		<label style="font-weight:bold;">Number 1 </label>
+		<input class="text" type="number" id="Number 1" >
+		</br>
+		<label style="font-weight:bold;">Number 2 </label>
+		<input class="text" type="number" id="Number 2"/>
+		</br>
+		<button class="text"onclick='calculateAll();'>Calculate All</button>
+		<button class="text" onclick='add();'>Add</button>
+		<button class="text" onclick='sub();'>Sub</button>
+		<button class="text" onclick='multiply();'>Multiply</button>
+		<button class="text" onclick='divide();'>Divide</button>
+		</br>
+		
+		
+		<table>
+			<tr>
+				<th>Add:</th>
+				<td><input style="border:none; margin-left:30px;" id="addOutput"/></td>
+			</tr>
+			<tr>
+				<th>Sub:</th>
+				<td><input style="border:none; margin-left:30px;" id="subOutput" /></td>
+			</tr>
+			<tr>
+				<th>Mul: </th>
+				<td><input style="border:none; margin-left:30px;" id="mulOutput" /></td>
+			</tr>	
+			<tr>
+				<th>Div: </th>
+				<td><input style="border:none; margin-left:30px;" id="divOutput" /></td>
+			</tr>
+		</table>	
+	</body>
+</html>
